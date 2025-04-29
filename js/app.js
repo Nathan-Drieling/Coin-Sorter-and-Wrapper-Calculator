@@ -41,7 +41,7 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     return CoinResult;
 }
 
-const CoinOptions = ['penny','nickel','dime','quarter'];
+const CoinOptions = ['penny ','nickel ','dime ','quarter '];
 const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 200);
 console.log(RandomSetOfCoins);
 
