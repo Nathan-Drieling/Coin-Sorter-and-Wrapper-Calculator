@@ -68,7 +68,7 @@ console.log(CoinSetArray);
 
 console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
 console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
-console.log(DimeCounter + " dimes equaling: " + DimesCounter * 0.10);
+console.log(DimeCounter + " dimes equaling: " + DimeCounter * 0.10);
 console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 
 console.log("Total: " + (PennyCounter * 0.01)
