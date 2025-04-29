@@ -76,7 +76,7 @@ const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 10);
 console.log(RandomSetOfCoins);
 
 console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
-console.log(NickelCounterCounter + " nickels equaling: " + NickelCounter * 0.05);
+console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
 console.log(DimeCounter + " dimes equaling: " + DimesCounter * 0.10);
 console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 
