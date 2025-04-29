@@ -16,6 +16,7 @@
 
 // Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
 
+
 var PennyWrapper = [50];
 var NickelsWrapper = [40];
 var DimesWrapper = [50];
@@ -29,16 +30,21 @@ let DimeCounter = 0;
 let QuarterCounter = 0;
 
 // Making a list of options for the coin possibility
-const CoinOptions = [' penny ',' nickel ',' dime ',' quarter '];
+const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
 // function call to create a random set of coins
 const CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
 
 // function to generate random coins in an array
-function GenerateRandomSetOfCoins(CoinOptions, length)
+function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 {
+    var Penny = { name: 'Penny', value: 0.01};
+    var Nickel = { name: 'Nickel', value: 0.05};
+    var Dime = { name: 'Dime', value: 0.10};
+    var Quarter = { name: 'Quarter', value: 0.25};
     const CoinResult = [];
-    for (let i = 0; i < length; i++)
+
+    for (let i = 0; i < AmountOfCoinsYouWantToGenerate; i++)
     {
         const RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
