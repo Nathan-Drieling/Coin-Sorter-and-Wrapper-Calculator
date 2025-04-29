@@ -32,14 +32,12 @@ let QuarterCounter = 0;
 const CoinOptions = ['penny ','nickel ','dime ','quarter '];
 
 // function call to create a random set of coins
-const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 10);
+const CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
 
 // function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, length)
 {
-    let CoinResult = '';
-    const CoinOptionsLength = CoinOptions.length;
-    
+    const CoinResult = [];
     for (let i = 0; i < length; i++)
     {
         const RandomIndex = Math.floor(Math.random() * CoinOptionsLength);
@@ -61,7 +59,7 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
             QuarterCounter++;
         }
         
-        CoinResult += CoinOptions[RandomIndex];
+        CoinResult.push(CoinOptions[RandomIndex]);
     }
     return CoinResult;
 }
