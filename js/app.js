@@ -40,7 +40,7 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     const CoinResult = [];
     for (let i = 0; i < length; i++)
     {
-        const RandomIndex = Math.floor(Math.random() * CoinOptionsLength);
+        const RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
         if (CoinResult.includes("penny "))
         {
