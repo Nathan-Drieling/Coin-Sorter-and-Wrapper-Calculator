@@ -47,25 +47,21 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     {
         const RandomIndex = Math.floor(Math.random() * CoinOptionsLength);
 
-        if (RandomIndex.includes("penny "))
+        if (CoinResult.includes("penny "))
         {
             PennyCounter++;
-            PutPennyInPennyWrapper();
         }
-        else if (RandomIndex.includes("nickel "))
+        else if (CoinResult.includes("nickel "))
         {
             NickelCounter++;
-            PutNickelInNickelWrapper();
         }
-        else if (RandomIndex.includes("dime "))
+        else if (CoinResult.includes("dime "))
         {
             DimeCounter++;
-            PutDimeInDimeWrapper();
         }
-        else if (RandomIndex.includes("quarter "))
+        else if (CoinResult.includes("quarter "))
         {
             QuarterCounter++;
-            PutQuarterInQuarterWrapper();
         }
         
         CoinResult += CoinOptions[RandomIndex];
