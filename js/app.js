@@ -38,6 +38,10 @@ const CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
 function GenerateRandomSetOfCoins(CoinOptions, length)
 {
     const CoinResult = [];
+    let PennyCounter = 0;
+    let NickelCounter = 0;
+    let DimeCounter = 0;
+    let QuarterCounter = 0;
     for (let i = 0; i < length; i++)
     {
         const RandomIndex = Math.floor(Math.random() * CoinOptions.length);
@@ -61,7 +65,7 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
         
         CoinResult.push(CoinOptions[RandomIndex]);
     }
-    return CoinResult;
+    return CoinResult, PennyCounter, NickelCounter, DimeCounter, QuarterCounter;
 }
 
 console.log(CoinSetArray);
