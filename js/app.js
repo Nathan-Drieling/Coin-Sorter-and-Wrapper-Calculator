@@ -29,7 +29,7 @@ let DimeCounter = 0;
 let QuarterCounter = 0;
 
 // Making a list of options for the coin possibility
-const CoinOptions = ['penny ','nickel ','dime ','quarter '];
+const CoinOptions = [' penny ',' nickel ',' dime ',' quarter '];
 
 // function call to create a random set of coins
 const CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
