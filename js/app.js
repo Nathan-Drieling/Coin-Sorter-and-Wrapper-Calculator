@@ -45,7 +45,7 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
     const CoinResult = [];
     for (let i = 0; i < AmountOfCoinsYouWantToGenerate; i++)
     {
-        const RandomIndex = Math.floor(Math.random() * CoinOptions.length);
+        let RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
         if (CoinResult[RandomIndex] === "Penny")
         {
