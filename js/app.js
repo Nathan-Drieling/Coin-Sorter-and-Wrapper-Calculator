@@ -50,19 +50,19 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 
         if (CoinResult[RandomIndex] === "Penny")
         {
-            PennyCounter++;
+            let PennyCounter = PennyCounter++;
         }
         else if (CoinResult[RandomIndex] === "Nickel")
         {
-            NickelCounter++;
+            let NickelCounter = NickelCounter++;
         }
         else if (CoinResult[RandomIndex] === "Dime")
         {
-            DimeCounter++;
+            let DimeCounter = DimeCounter++;
         }
         else if (CoinResult[RandomIndex] === "Quarter")
         {
-            QuarterCounter++;
+            let QuarterCounter = QuarterCounter++;
         }
         
         CoinResult.push(CoinOptions[RandomIndex]);
