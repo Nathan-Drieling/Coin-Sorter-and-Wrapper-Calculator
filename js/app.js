@@ -14,18 +14,12 @@
 //            total value of coins for each type
 //            total value of coins together
 
-// assigning base values to each coin type for the total all together
-let penniesValue = 0.01;
-let nickelsValue = 0.05;
-let dimesValue = 0.10;
-let quartersValue = 0.25;
-
 // Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
 
-let PennyWrapper = [50];
-let NickelsWrapper = [40];
-let DimesWrapper = [50];
-let QuartersWrapper = [40];
+var PennyWrapper = [50];
+var NickelsWrapper = [40];
+var DimesWrapper = [50];
+var QuartersWrapper = [40];
 
 // Counters for each coin will keep trach of how many coins are created
 
@@ -36,6 +30,9 @@ let QuarterCounter = 0;
 
 // Making a list of options for the coin possibility
 const CoinOptions = ['penny ','nickel ','dime ','quarter '];
+
+// function call to create a random set of coins
+const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 10);
 
 // function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, length)
@@ -68,10 +65,6 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     }
     return CoinResult;
 }
-
-
-const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 10);
-
 
 console.log(RandomSetOfCoins);
 
