@@ -33,7 +33,7 @@ let QuarterCounter = 0;
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
 // function call to create a random set of coins
-const CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
+let CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 10);
 
 // function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
