@@ -64,7 +64,7 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     return CoinResult;
 }
 
-console.log(RandomSetOfCoins);
+console.log(CoinSetArray);
 
 console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
 console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
