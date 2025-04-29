@@ -47,23 +47,28 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
     {
         let RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
-        if (CoinResult[RandomIndex] === "Penny")
+        switch (CoinResult)
         {
-            PennyCounter++;
+            case "Penny":
+                PennyCounter++;
+                break;
+            
+            case "Nickel":
+                NickelCounter;
+                break;
+            
+            case "Dime":
+                DimeCounter;
+                break;
+
+            case "Quarter":
+                QuarterCounter;
+                break;
+
+            default:
+                console.log("There was an error");
         }
-        else if (CoinResult[RandomIndex] === "Nickel")
-        {
-            NickelCounter++;
-        }
-        else if (CoinResult[RandomIndex] === "Dime")
-        {
-            DimeCounter++;
-        }
-        else if (CoinResult[RandomIndex] === "Quarter")
-        {
-            QuarterCounter++;
-        }
-        
+                
         CoinResult.push(CoinOptions[RandomIndex]);
     }
     return CoinResult;
@@ -76,10 +81,10 @@ console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
 console.log(DimeCounter + " dimes equaling: " + DimeCounter * 0.10);
 console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 
-console.log("Total: " + (PennyCounter * 0.01)
-                      + (NickelCounter * 0.05)
-                      + (DimeCounter * 0.10)
-                      + (QuarterCounter * 0.25))
+// console.log("Total: " + (PennyCounter * 0.01)
+//                       + (NickelCounter * 0.05)
+//                       + (DimeCounter * 0.10)
+//                       + (QuarterCounter * 0.25))
 
 
 
