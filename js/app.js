@@ -47,7 +47,7 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
     {
         let RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
-        switch (CoinResult)
+        switch (CoinResult[i])
         {
             case "Penny":
                 PennyCounter++;
@@ -68,7 +68,7 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
             default:
                 console.log("There was an error");
         }
-                
+
         CoinResult.push(CoinOptions[RandomIndex]);
     }
     return CoinResult;
@@ -88,23 +88,41 @@ console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 
 
 
-function PutPennyInPennyWrapper()
-{
-    PennyWrapper[i];
-    i++;
-}
+// function PutPennyInPennyWrapper()
+// {
+//     PennyWrapper[i];
+//     i++;
+// }
 
-function PutNickelInNickelWrapper()
-{
+// function PutNickelInNickelWrapper()
+// {
 
-}
+// }
 
-function PutDimeInDimeWrapper()
-{
+// function PutDimeInDimeWrapper()
+// {
 
-}
+// }
 
-function PutQuarterInQuarterWrapper()
-{
+// function PutQuarterInQuarterWrapper()
+// {
 
-}
+// }
+
+
+// if (CoinResult[RandomIndex] === "Penny")
+//     {
+//         PennyCounter++;
+//     }
+//     else if (CoinResult[RandomIndex] === "Nickel")
+//     {
+//         NickelCounter++;
+//     }
+//     else if (CoinResult[RandomIndex] === "Dime")
+//     {
+//         DimeCounter++;
+//     }
+//     else if (CoinResult[RandomIndex] === "Quarter")
+//     {
+//         QuarterCounter++;
+//     }
