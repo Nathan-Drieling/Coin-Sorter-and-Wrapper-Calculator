@@ -1,16 +1,18 @@
 // COIN SORTER AND WRAPPER CALCULATOR PROGRAM
-
-// creating variables to describe the QUANTITY of coins (change values for your own experimentation)
-let pennies = 200;
-let nickles = 200;
-let dimes = 200;
-let quarters = 200;
-
-// creating boolean values to use for if check
-let IsAPenny = true;
-let IsANickel = true;
-let IsADime = true;
-let IsAQuarter = true;
+// Algorithm: make coin(s)
+//            check if coin is penny, nickel, dime, or quarter
+//            while loop while coins are unsorted
+//            if penny
+//               function call to put penny in wrapper
+//            if dime
+//               function call to put dime in wrapper
+//            if quarter
+//               function call to put quarter in wrapper
+//            if else
+//               This is not a valid coin
+//            exit loop
+//            total value of coins for each type
+//            total value of coins together
 
 // assigning base values to each coin type for the total all together
 let penniesValue = 0.01;
@@ -25,8 +27,17 @@ let NickelsWrapper = [40];
 let DimesWrapper = [50];
 let QuartersWrapper = [40];
 
+// Counters for each coin will keep trach of how many coins are created
 
-// function to generate random voins in an array
+let PennyCounter = 0;
+let NickelCounter = 0;
+let DimeCounter = 0;
+let QuarterCounter = 0;
+
+// Making a list of options for the coin possibility
+const CoinOptions = ['penny ','nickel ','dime ','quarter '];
+
+// function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, length)
 {
     let CoinResult = '';
@@ -36,16 +47,47 @@ function GenerateRandomSetOfCoins(CoinOptions, length)
     {
         const RandomIndex = Math.floor(Math.random() * CoinOptionsLength);
 
+        if (RandomIndex.includes("penny "))
+        {
+            PennyCounter++;
+            PutPennyInPennyWrapper();
+        }
+        else if (RandomIndex.includes("nickel "))
+        {
+            NickelCounter++;
+            PutNickelInNickelWrapper();
+        }
+        else if (RandomIndex.includes("dime "))
+        {
+            DimeCounter++;
+            PutDimeInDimeWrapper();
+        }
+        else if (RandomIndex.includes("quarter "))
+        {
+            QuarterCounter++;
+            PutQuarterInQuarterWrapper();
+        }
+        
         CoinResult += CoinOptions[RandomIndex];
     }
     return CoinResult;
 }
 
-const CoinOptions = ['penny ','nickel ','dime ','quarter '];
-const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 200);
+
+const RandomSetOfCoins = GenerateRandomSetOfCoins(CoinOptions, 10);
+
+
 console.log(RandomSetOfCoins);
 
+console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
+console.log(NickelCounterCounter + " nickels equaling: " + NickelCounter * 0.05);
+console.log(DimeCounter + " dimes equaling: " + DimesCounter * 0.10);
+console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 
+console.log("Total: " + (PennyCounter * 0.01)
+                      + (NickelCounter * 0.05)
+                      + (DimeCounter * 0.10)
+                      + (QuarterCounter * 0.25))
 
 
 
@@ -68,42 +110,4 @@ function PutDimeInDimeWrapper()
 function PutQuarterInQuarterWrapper()
 {
 
-}
-
-// Algorithm: make coin(s)
-//            check if coin is penny, nickel, dime, or quarter
-//            while loop while coins are unsorted
-//            if penny
-//               function call to put penny in wrapper
-//            if dime
-//               function call to put dime in wrapper
-//            if quarter
-//               function call to put quarter in wrapper
-//            if else
-//               This is not a valid coin
-//            exit loop
-//            total value of coins for each type
-//            total value of coins together
-
-
-// if else check to put coin in a wrapper
-
-for (let i = 0; i < TotalAmountOfCoins; i++)
-{
-    if (IsAPenny)
-    {
-        PutPennyInPennyWrapper();
-    }
-    else if (IsANickel)
-    {
-        PutNickelInNickelWrapper();
-    }
-    else if (IsADime)
-    {
-        PutDimeInDimeWrapper();
-    }
-    else if (IsAQuarter)
-    {
-        PutQuarterInQuarterWrapper();
-    }
 }
