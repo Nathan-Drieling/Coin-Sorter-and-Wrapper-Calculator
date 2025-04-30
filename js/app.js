@@ -108,7 +108,7 @@ function PutQuartersInQuarterWrappers()
 let PenniesTotalValue = PenniesCounter * 0.01;
 const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
 
-console.log(PennyCounter + " pennies equaling: " + RoundedPenniesAmount);
+console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
 
 let NickelsTotalValue = NickelsCounter * 0.05;
 const RoundedNickelsAmount = NickelsTotalValue.toFixed(2);
