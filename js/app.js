@@ -100,7 +100,7 @@ function PutQuartersInQuarterWrappers()
     {
         if (CoinSetArray[i] === 'Quarter'
             && QuarterWrapper.length < 40){
-                
+
             QuartersCounter++;
             QuarterWrapper.push('Quarter');    
         }
@@ -138,3 +138,6 @@ const RoundedGrandTotal = GrandTotal.toFixed(2);
 console.log("Total: $" + RoundedGrandTotal);
 
 console.log("Here are all the pennies: " + PennyWrapper)
+console.log("Here are all the Nickels: " + NickelWrapper)
+console.log("Here are all the Dimes: " + DimeWrapper)
+console.log("Here are all the Quarters: " + QuarterWrapper)
