@@ -28,9 +28,6 @@ let NickelsCounter = 0;
 let DimesCounter = 0;
 let QuartersCounter = 0;
 
-// Grand total
-let Total = 0;
-
 // Making a list of options for the coin possibility
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
@@ -125,5 +122,7 @@ const RoundedQuartersAmount = QuartersTotalValue.toFixed(2);
 
 console.log(QuartersCounter + " quarters equaling: " + RoundedQuartersAmount);
 
-console.log("Total: $" + (RoundedPenniesAmount + RoundedNickelsAmount 
-                      + RoundedDimesAmount + RoundedQuartersAmount));
+let GrandTotal = RoundedPenniesAmount + RoundedNickelsAmount 
++ RoundedDimesAmount + RoundedQuartersAmount;
+
+console.log("Total: $" + GrandTotal);
