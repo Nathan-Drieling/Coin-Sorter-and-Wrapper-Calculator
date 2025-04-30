@@ -32,6 +32,12 @@ let NickelsThatAreLeftOver = 0;
 let DimesThatAreLeftOver = 0;
 let QuartersThatAreLeftOver = 0;
 
+// Counters for each coin will keep trach of how many coins are created
+let PenniesWrapperCounter = 0;
+let NickelsWrapperCounter = 0;
+let DimesWrapperCounter = 0;
+let QuartersWrapperCounter = 0;
+
 // Making a list of options for the coin possibility
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
@@ -67,6 +73,10 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 
             PenniesCounter++;
             PennyWrapper.push('Penny');
+            if (PennyWrapper.length >= 50)
+            {
+                PenniesWrapperCounter++;
+            }
         }
         else 
         {
