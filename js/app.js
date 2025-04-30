@@ -16,9 +16,9 @@
 
 // Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
 var PennyWrapper = [50];
-var NickelsWrapper = [40];
-var DimesWrapper = [50];
-var QuartersWrapper = [40];
+var NickelWrapper = [40];
+var DimeWrapper = [50];
+var QuarterWrapper = [40];
 
 // Counters for each coin will keep trach of how many coins are created
 let PenniesCounter = 0;
@@ -59,7 +59,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
         if (CoinSetArray[i] === 'Penny')
         {
             PenniesCounter++;
-            if (!PennyWrapper.length)
+            if (PennyWrapper.length === 0)
             {
                 PennyWrapper.push('Penny');
             }
@@ -75,6 +75,10 @@ function PutNickelsInNickelWrappers()
         if (CoinSetArray[i] === 'Nickel')
         {
             NickelsCounter++;
+            if (NickelWrapper.length === 0)
+            {
+                NickelWrapper.push('Nickel');
+            }
         }
     }
     return NickelsCounter;
@@ -87,6 +91,10 @@ function PutDimesInDimeWrappers()
         if (CoinSetArray[i] === 'Dime')
         {
             DimesCounter++;
+            if (DimeWrapper.length === 0)
+            {
+                DimeWrapper.push('Dime');
+            }
         }
     }
     return DimesCounter;
@@ -99,6 +107,10 @@ function PutQuartersInQuarterWrappers()
         if (CoinSetArray[i] === 'Quarter')
         {
             QuartersCounter++;
+            if (QuarterWrapper.length === 0)
+                {
+                    QuarterWrapper.push('Quarter');
+                }
         }
     }
     return QuartersCounter;
