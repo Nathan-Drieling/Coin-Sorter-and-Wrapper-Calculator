@@ -14,11 +14,6 @@
 //            total value of coins for each type
 //            total value of coins together
 
-var Penny = { name: 'Penny', value: 0.01};
-    var Nickel = { name: 'Nickel', value: 0.05};
-    var Dime = { name: 'Dime', value: 0.10};
-    var Quarter = { name: 'Quarter', value: 0.25};
-
 // Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
 
 var PennyWrapper = [50];
@@ -32,6 +27,9 @@ let PennyCounter = 0;
 let NickelCounter = 0;
 let DimeCounter = 0;
 let QuarterCounter = 0;
+
+// Grand total
+let Total = 0;
 
 // Making a list of options for the coin possibility
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
@@ -47,34 +45,62 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
     {
         let RandomIndex = Math.floor(Math.random() * CoinOptions.length);
 
-        switch (CoinResult[i])
-        {
-            case "Penny":
-                PennyCounter++;
-                break;
-            
-            case "Nickel":
-                NickelCounter;
-                break;
-            
-            case "Dime":
-                DimeCounter;
-                break;
-
-            case "Quarter":
-                QuarterCounter;
-                break;
-
-            default:
-                console.log("There was an error");
-        }
-
         CoinResult.push(CoinOptions[RandomIndex]);
     }
     return CoinResult;
 }
 
 console.log(CoinSetArray);
+
+let SortPennies = PutPenniesInPennyWrapper(CoinSetArray);
+
+function PutPenniesInPennyWrapper(CoinSetArray)
+{
+    for (let i = 0; i < CoinSetArray.length; i++)
+    {
+        if (CoinSetArray[i] === 'Penny')
+        {
+            PennyCounter++;
+        }
+    }
+    return PennyCounter;
+}
+
+function PutNickelsInNickelWrapper()
+{
+    for (let i = 0; i < CoinSetArray.length; i++)
+    {
+        if (CoinSetArray[i] === 'Nickel')
+        {
+            NickelCounter++;
+        }
+    }
+    return NickelCounter;
+}
+
+function PutDimeInDimeWrapper()
+{
+    for (let i = 0; i < CoinSetArray.length; i++)
+    {
+        if (CoinSetArray[i] === 'Dime')
+        {
+            DimeCounter++;
+        }
+    }
+    return DimeCounter;
+}
+
+function PutQuarterInQuarterWrapper()
+{
+    for (let i = 0; i < CoinSetArray.length; i++)
+    {
+        if (CoinSetArray[i] === 'Quarter')
+        {
+            QuarterCounter++;
+        }
+    }
+    return QuarterCounter;
+}
 
 console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
 console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
@@ -85,44 +111,3 @@ console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
 //                       + (NickelCounter * 0.05)
 //                       + (DimeCounter * 0.10)
 //                       + (QuarterCounter * 0.25))
-
-
-
-// function PutPennyInPennyWrapper()
-// {
-//     PennyWrapper[i];
-//     i++;
-// }
-
-// function PutNickelInNickelWrapper()
-// {
-
-// }
-
-// function PutDimeInDimeWrapper()
-// {
-
-// }
-
-// function PutQuarterInQuarterWrapper()
-// {
-
-// }
-
-
-// if (CoinResult[RandomIndex] === "Penny")
-//     {
-//         PennyCounter++;
-//     }
-//     else if (CoinResult[RandomIndex] === "Nickel")
-//     {
-//         NickelCounter++;
-//     }
-//     else if (CoinResult[RandomIndex] === "Dime")
-//     {
-//         DimeCounter++;
-//     }
-//     else if (CoinResult[RandomIndex] === "Quarter")
-//     {
-//         QuarterCounter++;
-//     }
