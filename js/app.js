@@ -61,6 +61,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
         if (CoinSetArray[i] === 'Penny')
         {
             PenniesCounter++;
+            PennyWrapper.push('Penny');
         }
     }
     return PenniesCounter;
@@ -130,3 +131,5 @@ let GrandTotal = (PenniesCounter * 0.01)
 const RoundedGrandTotal = GrandTotal.toFixed(2);
 
 console.log("Total: $" + RoundedGrandTotal);
+
+console.log("Here are all the pennies: " + PennyWrapper)
