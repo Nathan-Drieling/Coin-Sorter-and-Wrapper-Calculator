@@ -122,7 +122,11 @@ const RoundedQuartersAmount = QuartersTotalValue.toFixed(2);
 
 console.log(QuartersCounter + " quarters equaling: " + RoundedQuartersAmount);
 
-let GrandTotal = RoundedPenniesAmount + RoundedNickelsAmount 
-+ RoundedDimesAmount + RoundedQuartersAmount;
+let GrandTotal = (PenniesCounter * 0.01) 
+               + (NickelsCounter * 0.05) 
+               + (DimesCounter * 0.10)
+               + (QuartersCounter * 0.25);
+ 
+const RoundedGrandTotal = GrandTotal.toFixed(2);
 
 console.log("Total: $" + GrandTotal);
