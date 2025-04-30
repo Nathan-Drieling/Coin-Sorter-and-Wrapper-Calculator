@@ -26,6 +26,12 @@ let NickelsCounter = 0;
 let DimesCounter = 0;
 let QuartersCounter = 0;
 
+// variables to check how many pennies are left over
+let PenniesThatAreLeftOver = 0;
+let NickelsThatAreLeftOver = 0;
+let DimesThatAreLeftOver = 0;
+let QuartersThatAreLeftOver = 0;
+
 // Making a list of options for the coin possibility
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
@@ -62,6 +68,10 @@ function PutPenniesInPennyWrappers(CoinSetArray)
             PenniesCounter++;
             PennyWrapper.push('Penny');
         }
+        else 
+        {
+            PenniesThatAreLeftOver++;
+        }
     }
     return PenniesCounter;
 }
@@ -75,6 +85,10 @@ function PutNickelsInNickelWrappers()
 
             NickelsCounter++;
             NickelWrapper.push('Nickel');
+        }
+        else
+        {
+            NickelsThatAreLeftOver++;
         }
     }
     return NickelsCounter;
@@ -90,6 +104,10 @@ function PutDimesInDimeWrappers()
             DimesCounter++;
             DimeWrapper.push('Dime');
         }
+        else
+        {
+            DimesThatAreLeftOver++;
+        }
     }
     return DimesCounter;
 }
@@ -103,6 +121,10 @@ function PutQuartersInQuarterWrappers()
 
             QuartersCounter++;
             QuarterWrapper.push('Quarter');    
+        }
+        else
+        {
+            QuartersThatAreLeftOver++;
         }
     }
     return QuartersCounter;
@@ -136,6 +158,23 @@ let GrandTotal = (PenniesCounter * 0.01)
 const RoundedGrandTotal = GrandTotal.toFixed(2);
 
 console.log("Total: $" + RoundedGrandTotal);
+
+console.log("There are " + PenniesThatAreLeftOver 
+                         + " pennies leftover");
+
+console.log("There are " + NickelsThatAreLeftOver 
+                         + " nickels leftover");
+
+console.log("There are " + DimesThatAreLeftOver 
+                         + " dimes leftover");
+
+console.log("There are " + QuartersThatAreLeftOver 
+                         + " quarters leftover");
+
+// let LeftoverPennies = PenniesNotInWrapper();
+// let LeftoverNickels = NickelsNotInWrapper();
+// let LeftoverDimes = DimesNotInWrapper();
+// let LeftoverQuarters = QuartersNotInWrapper();
 
 // just a test to see the arrays
 
