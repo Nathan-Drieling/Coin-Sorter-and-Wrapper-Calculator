@@ -56,13 +56,11 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Penny')
+        if (CoinSetArray[i] === 'Penny' && 
+            PennyWrapper.length === 0)
         {
             PenniesCounter++;
-            if (PennyWrapper.length === 0)
-            {
-                PennyWrapper.push('Penny');
-            }
+            PennyWrapper.push('Penny');
         }
     }
     return PenniesCounter;
