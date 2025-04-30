@@ -113,12 +113,12 @@ console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
 let NickelsTotalValue = NickelsCounter * 0.05;
 const RoundedNickelsAmount = NickelsTotalValue.toFixed(2);
 
-console.log(NickelCounter + " nickels equaling: " + RoundedNickelsAmount);
+console.log(NickelsCounter + " nickels equaling: " + RoundedNickelsAmount);
 
 let DimesTotalValue = DimesCounter * 0.10;
 const RoundedDimesAmount = DimesTotalValue.toFixed(2);
 
-console.log(DimeCounter + " dimes equaling: " + RoundedDimesAmount);
+console.log(DimesCounter + " dimes equaling: " + RoundedDimesAmount);
 
 let QuartersTotalValue = QuartersCounter * 0.25;
 const RoundedQuartersAmount = QuartersTotalValue.toFixed(2);
