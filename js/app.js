@@ -15,7 +15,7 @@
 //            total value of coins together
 
 // Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
-let PennyWrapper = new Array[50];
+let PennyWrapper = new Array(50);
 var NickelWrapper = [40];
 var DimeWrapper = [50];
 var QuarterWrapper = [40];
