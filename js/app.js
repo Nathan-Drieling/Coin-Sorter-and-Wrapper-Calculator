@@ -55,7 +55,7 @@ console.log(CoinSetArray);
 let SortPennies = PutPenniesInPennyWrappers(CoinSetArray);
 let SortNickels = PutNickelsInNickelWrappers(CoinSetArray);
 let SortDimes = PutDimesInDimeWrappers(CoinSetArray);
-let SortQuarters = PutQuartersInDimeWrappers(CoinSetArray);
+let SortQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
 
 function PutPenniesInPennyWrappers(CoinSetArray)
 {
