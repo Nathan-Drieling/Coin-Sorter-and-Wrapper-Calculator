@@ -137,7 +137,9 @@ const RoundedGrandTotal = GrandTotal.toFixed(2);
 
 console.log("Total: $" + RoundedGrandTotal);
 
-console.log("Here are all the pennies: " + PennyWrapper)
-console.log("Here are all the Nickels: " + NickelWrapper)
-console.log("Here are all the Dimes: " + DimeWrapper)
-console.log("Here are all the Quarters: " + QuarterWrapper)
+// just a test to see the arrays
+
+// console.log("Here are all the pennies: " + PennyWrapper)
+// console.log("Here are all the Nickels: " + NickelWrapper)
+// console.log("Here are all the Dimes: " + DimeWrapper)
+// console.log("Here are all the Quarters: " + QuarterWrapper)
