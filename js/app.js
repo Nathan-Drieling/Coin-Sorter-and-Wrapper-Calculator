@@ -105,13 +105,17 @@ function PutQuartersInQuarterWrappers()
     return QuarterCounter;
 }
 
-console.log(PennyCounter + " pennies equaling: " + (PennyCounter * 0.01));
+console.log(PennyCounter + " pennies equaling: " + 
+    Math.round((PennyCounter * 0.01) * 100 / 100));
 
-console.log(NickelCounter + " nickels equaling: " + (NickelCounter * 0.05));
+console.log(NickelCounter + " nickels equaling: " +
+    Math.round((NickelCounter * 0.01) * 100 / 100));
 
-console.log(DimeCounter + " dimes equaling: " + (DimeCounter * 0.10));
+console.log(DimeCounter + " dimes equaling: " + 
+    Math.round((DimeCounter * 0.01) * 100 / 100));
 
-console.log(QuarterCounter + " quarters equaling: " + (QuarterCounter * 0.25));
+console.log(QuarterCounter + " quarters equaling: " + 
+    Math.round((QuarterCounter * 0.01) * 100 / 100));
 
 console.log("Total: " + ((PennyCounter * 0.01)
                       + (NickelCounter * 0.05)
