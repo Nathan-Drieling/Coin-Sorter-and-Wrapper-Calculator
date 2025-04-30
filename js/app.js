@@ -58,7 +58,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
     {
         if (CoinSetArray[i] === 'Penny'
             && PennyWrapper.length < 50){
-                
+
             PenniesCounter++;
             PennyWrapper.push('Penny');
         }
@@ -70,13 +70,11 @@ function PutNickelsInNickelWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Nickel')
-        {
+        if (CoinSetArray[i] === 'Nickel' 
+            && NickelWrapper.length < 40){
+
             NickelsCounter++;
-            if (NickelWrapper.length === 0)
-            {
-                NickelWrapper.push('Nickel');
-            }
+            NickelWrapper.push('Nickel');
         }
     }
     return NickelsCounter;
@@ -86,13 +84,11 @@ function PutDimesInDimeWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Dime')
-        {
+        if (CoinSetArray[i] === 'Dime'
+            && DimeWrapper.length < 50){
+
             DimesCounter++;
-            if (DimeWrapper.length === 0)
-            {
-                DimeWrapper.push('Dime');
-            }
+            DimeWrapper.push('Dime');
         }
     }
     return DimesCounter;
@@ -102,13 +98,11 @@ function PutQuartersInQuarterWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Quarter')
-        {
+        if (CoinSetArray[i] === 'Quarter'
+            && QuarterWrapper.length < 40){
+                
             QuartersCounter++;
-            if (QuarterWrapper.length === 0)
-                {
-                    QuarterWrapper.push('Quarter');
-                }
+            QuarterWrapper.push('Quarter');    
         }
     }
     return QuartersCounter;
