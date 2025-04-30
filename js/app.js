@@ -129,4 +129,4 @@ let GrandTotal = (PenniesCounter * 0.01)
  
 const RoundedGrandTotal = GrandTotal.toFixed(2);
 
-console.log("Total: $" + GrandTotal);
+console.log("Total: $" + RoundedGrandTotal);
