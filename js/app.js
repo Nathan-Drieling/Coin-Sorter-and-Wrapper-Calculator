@@ -52,9 +52,12 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 
 console.log(CoinSetArray);
 
-let SortPennies = PutPenniesInPennyWrapper(CoinSetArray);
+let SortPennies = PutPenniesInPennyWrappers(CoinSetArray);
+let SortNickels = PutNickelsInNickelWrappers(CoinSetArray);
+let SortDimes = PutDimesInDimeWrappers(CoinSetArray);
+let SortQuarters = PutQuartersInDimeWrappers(CoinSetArray);
 
-function PutPenniesInPennyWrapper(CoinSetArray)
+function PutPenniesInPennyWrappers(CoinSetArray)
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
@@ -66,7 +69,7 @@ function PutPenniesInPennyWrapper(CoinSetArray)
     return PennyCounter;
 }
 
-function PutNickelsInNickelWrapper()
+function PutNickelsInNickelWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
@@ -78,7 +81,7 @@ function PutNickelsInNickelWrapper()
     return NickelCounter;
 }
 
-function PutDimeInDimeWrapper()
+function PutDimesInDimeWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
@@ -90,7 +93,7 @@ function PutDimeInDimeWrapper()
     return DimeCounter;
 }
 
-function PutQuarterInQuarterWrapper()
+function PutQuartersInQuarterWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
@@ -103,6 +106,7 @@ function PutQuarterInQuarterWrapper()
 }
 
 console.log(PennyCounter + " pennies equaling: " + PennyCounter * 0.01);
+
 console.log(NickelCounter + " nickels equaling: " + NickelCounter * 0.05);
 console.log(DimeCounter + " dimes equaling: " + DimeCounter * 0.10);
 console.log(QuarterCounter + " quarters equaling: " + QuarterCounter * 0.25);
