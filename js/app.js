@@ -23,10 +23,10 @@ var QuartersWrapper = [40];
 
 // Counters for each coin will keep trach of how many coins are created
 
-let PennyCounter = 0;
-let NickelCounter = 0;
-let DimeCounter = 0;
-let QuarterCounter = 0;
+let PenniesCounter = 0;
+let NickelsCounter = 0;
+let DimesCounter = 0;
+let QuartersCounter = 0;
 
 // Grand total
 let Total = 0;
@@ -52,10 +52,10 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 
 console.log(CoinSetArray);
 
-let SortPennies = PutPenniesInPennyWrappers(CoinSetArray);
-let SortNickels = PutNickelsInNickelWrappers(CoinSetArray);
-let SortDimes = PutDimesInDimeWrappers(CoinSetArray);
-let SortQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
+let FindPennies = PutPenniesInPennyWrappers(CoinSetArray);
+let FindNickels = PutNickelsInNickelWrappers(CoinSetArray);
+let FindDimes = PutDimesInDimeWrappers(CoinSetArray);
+let FindQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
 
 function PutPenniesInPennyWrappers(CoinSetArray)
 {
@@ -63,10 +63,10 @@ function PutPenniesInPennyWrappers(CoinSetArray)
     {
         if (CoinSetArray[i] === 'Penny')
         {
-            PennyCounter++;
+            PenniesCounter++;
         }
     }
-    return PennyCounter;
+    return PenniesCounter;
 }
 
 function PutNickelsInNickelWrappers()
@@ -75,10 +75,10 @@ function PutNickelsInNickelWrappers()
     {
         if (CoinSetArray[i] === 'Nickel')
         {
-            NickelCounter++;
+            NickelsCounter++;
         }
     }
-    return NickelCounter;
+    return NickelsCounter;
 }
 
 function PutDimesInDimeWrappers()
@@ -87,10 +87,10 @@ function PutDimesInDimeWrappers()
     {
         if (CoinSetArray[i] === 'Dime')
         {
-            DimeCounter++;
+            DimesCounter++;
         }
     }
-    return DimeCounter;
+    return DimesCounter;
 }
 
 function PutQuartersInQuarterWrappers()
@@ -99,25 +99,31 @@ function PutQuartersInQuarterWrappers()
     {
         if (CoinSetArray[i] === 'Quarter')
         {
-            QuarterCounter++;
+            QuartersCounter++;
         }
     }
-    return QuarterCounter;
+    return QuartersCounter;
 }
 
-console.log(PennyCounter + " pennies equaling: " + 
-    Math.round((PennyCounter * 0.01) * 100 / 100));
+let PenniesTotalValue = PenniesCounter * 0.01;
+const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
 
-console.log(NickelCounter + " nickels equaling: " +
-    Math.round((NickelCounter * 0.01) * 100 / 100));
+console.log(PennyCounter + " pennies equaling: " + RoundedPenniesAmount);
 
-console.log(DimeCounter + " dimes equaling: " + 
-    Math.round((DimeCounter * 0.01) * 100 / 100));
+let NickelsTotalValue = NickelsCounter * 0.05;
+const RoundedNickelsAmount = NickelsTotalValue.toFixed(2);
 
-console.log(QuarterCounter + " quarters equaling: " + 
-    Math.round((QuarterCounter * 0.01) * 100 / 100));
+console.log(NickelCounter + " nickels equaling: " + RoundedNickelsAmount);
 
-console.log("Total: " + ((PennyCounter * 0.01)
-                      + (NickelCounter * 0.05)
-                      + (DimeCounter * 0.10)
-                      + (QuarterCounter * 0.25)));
+let DimesTotalValue = DimesCounter * 0.10;
+const RoundedDimesAmount = DimesTotalValue.toFixed(2);
+
+console.log(DimeCounter + " dimes equaling: " + RoundedDimesAmount);
+
+let QuartersTotalValue = QuartersCounter * 0.25;
+const RoundedQuartersAmount = QuartersTotalValue.toFixed(2);
+
+console.log(QuartersCounter + " quarters equaling: " + RoundedQuartersAmount);
+
+console.log("Total: $" + (RoundedPenniesAmount + RoundedNickelsAmount 
+                      + RoundedDimesAmount + RoundedQuartersAmount));
