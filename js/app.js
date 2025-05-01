@@ -90,7 +90,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 
     console.log(`${WrapperAmountForPennies} is the amount of wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
 
-    return PenniesCounter, wrapperAmountForPennies;
+    return PenniesCounter;
 }
 
 function PutNickelsInNickelWrappers()
