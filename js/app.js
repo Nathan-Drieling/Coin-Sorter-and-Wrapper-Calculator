@@ -46,6 +46,8 @@ const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 // function call to create a random set of coins
 let CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 200);
 
+
+
 // function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 {
@@ -61,7 +63,17 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 
 console.log(CoinSetArray);
 
+
+
+
+
 let FindPennies = PutPenniesInPennyWrappers(CoinSetArray);
+
+let PenniesTotalValue = PenniesCounter * 0.01;
+const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
+
+console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
+
 let FindNickels = PutNickelsInNickelWrappers(CoinSetArray);
 let FindDimes = PutDimesInDimeWrappers(CoinSetArray);
 let FindQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
@@ -75,14 +87,16 @@ function PutPenniesInPennyWrappers(CoinSetArray)
             PenniesCounter++;
 
             let pennyWrapper = 50;
-            let wrapperAmount = Math.floor(PenniesCounter/pennyWrapper);
+
+            wrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
+
             let remainder = PenniesCounter % pennyWrapper;
 
             console.log(`${wrapperAmount} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${remainder}` : ""}`);
 
         }
     }
-    return PenniesCounter;
+    return PenniesCounter, wrapperAmountForPennies;
 }
 
 function PutNickelsInNickelWrappers()
@@ -121,10 +135,7 @@ function PutQuartersInQuarterWrappers()
     return QuartersCounter;
 }
 
-let PenniesTotalValue = PenniesCounter * 0.01;
-const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
 
-console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
 
 let NickelsTotalValue = NickelsCounter * 0.05;
 const RoundedNickelsAmount = NickelsTotalValue.toFixed(2);
