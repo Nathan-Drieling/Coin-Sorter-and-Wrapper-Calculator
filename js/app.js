@@ -25,8 +25,10 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
     return CoinResult;
 }
 
+// Printing out the randomly generated coins.
 console.log(CoinSetArray);
 
+// function calls to find each coin type in the set of coins
 let FindPennies = PutPenniesInPennyWrappers(CoinSetArray);
 let FindNickels = PutNickelsInNickelWrappers(CoinSetArray);
 let FindDimes = PutDimesInDimeWrappers(CoinSetArray);
@@ -43,7 +45,6 @@ function PutPenniesInPennyWrappers(CoinSetArray)
         if (CoinSetArray[i] === 'Penny')
         {
             PenniesCounter++;
-
             WrapperAmountForPennies = Math.floor(PenniesCounter/PennyWrapper);
 
             PenniesRemainder = PenniesCounter % PennyWrapper;
@@ -126,6 +127,7 @@ function PutQuartersInQuarterWrappers()
     return QuartersCounter;
 }
 
+// Doing the math for the value of each coin
 let PenniesTotalValue = PenniesCounter * 0.01;
 const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
 
@@ -146,6 +148,7 @@ const RoundedQuartersAmount = QuartersTotalValue.toFixed(2);
 
 console.log(QuartersCounter + " quarters equaling: " + RoundedQuartersAmount);
 
+// Doing the math to find the grand total
 let GrandTotal = (PenniesCounter * 0.01) 
                + (NickelsCounter * 0.05) 
                + (DimesCounter * 0.10)
