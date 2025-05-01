@@ -84,11 +84,10 @@ function PutPenniesInPennyWrappers(CoinSetArray)
             WrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
 
             PenniesRemainder = PenniesCounter % PennyWrapper;
-
         }
     }
-
-    console.log(`${WrapperAmountForPennies} is the amount of wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
+    
+    console.log(`${WrapperAmountForPennies} is the amount of penny wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
 
     return PenniesCounter;
 }
