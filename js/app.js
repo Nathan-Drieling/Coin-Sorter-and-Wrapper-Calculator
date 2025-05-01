@@ -25,15 +25,6 @@ let nickelWrapper = 40;
 let dimeWrapper = 50;
 let quarterWrapper = 40;
 
-let wrapperAmountForPennies = 0;
-let wrapperAmountForNickels = 0;
-let wrapperAmountForDimes = 0;
-let wrapperAmountForQuarters = 0;
-
-
-wrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
-let remainder = PenniesCounter % pennyWrapper;
-
 // Counters for each coin will keep trach of how many coins are created
 let PenniesWrapperCounter = 0;
 let NickelsWrapperCounter = 0;
@@ -80,22 +71,25 @@ let FindQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
 
 function PutPenniesInPennyWrappers(CoinSetArray)
 {
+    let PennyWrapper = 50;
+    let WrapperAmountForPennies = 0;
+    let PenniesRemainder = 0; 
+
     for (let i = 0; i < CoinSetArray.length; i++)
     {
         if (CoinSetArray[i] === 'Penny')
         {
             PenniesCounter++;
 
-            let pennyWrapper = 50;
+            WrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
 
-            wrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
-
-            let remainder = PenniesCounter % pennyWrapper;
-
-            console.log(`${wrapperAmount} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${remainder}` : ""}`);
+            PenniesRemainder = PenniesCounter % PennyWrapper;
 
         }
     }
+
+    console.log(`${wrapperAmountForPennies} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
+
     return PenniesCounter, wrapperAmountForPennies;
 }
 
