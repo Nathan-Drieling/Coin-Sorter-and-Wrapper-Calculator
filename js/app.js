@@ -1,18 +1,4 @@
 // COIN SORTER AND WRAPPER CALCULATOR PROGRAM
-// Algorithm: make coin(s)
-//            check if coin is penny, nickel, dime, or quarter
-//            while loop while coins are unsorted
-//            if penny
-//               function call to put penny in wrapper
-//            if dime
-//               function call to put dime in wrapper
-//            if quarter
-//               function call to put quarter in wrapper
-//            if else
-//               This is not a valid coin
-//            exit loop
-//            total value of coins for each type
-//            total value of coins together
 
 // Counters for each coin will keep trach of how many coins are created
 let PenniesCounter = 0;
@@ -20,24 +6,11 @@ let NickelsCounter = 0;
 let DimesCounter = 0;
 let QuartersCounter = 0;
 
-let pennyWrapper = 50;
-let nickelWrapper = 40;
-let dimeWrapper = 50;
-let quarterWrapper = 40;
-
-// Counters for each coin will keep trach of how many coins are created
-let PenniesWrapperCounter = 0;
-let NickelsWrapperCounter = 0;
-let DimesWrapperCounter = 0;
-let QuartersWrapperCounter = 0;
-
 // Making a list of options for the coin possibility
 const CoinOptions = ['Penny','Nickel','Dime','Quarter'];
 
 // function call to create a random set of coins
 let CoinSetArray = GenerateRandomSetOfCoins(CoinOptions, 200);
-
-
 
 // function to generate random coins in an array
 function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
@@ -54,17 +27,7 @@ function GenerateRandomSetOfCoins(CoinOptions, AmountOfCoinsYouWantToGenerate)
 
 console.log(CoinSetArray);
 
-
-
-
-
 let FindPennies = PutPenniesInPennyWrappers(CoinSetArray);
-
-let PenniesTotalValue = PenniesCounter * 0.01;
-const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
-
-console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
-
 let FindNickels = PutNickelsInNickelWrappers(CoinSetArray);
 let FindDimes = PutDimesInDimeWrappers(CoinSetArray);
 let FindQuarters = PutQuartersInQuarterWrappers(CoinSetArray);
@@ -81,12 +44,12 @@ function PutPenniesInPennyWrappers(CoinSetArray)
         {
             PenniesCounter++;
 
-            WrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
+            WrapperAmountForPennies = Math.floor(PenniesCounter/PennyWrapper);
 
             PenniesRemainder = PenniesCounter % PennyWrapper;
         }
     }
-    
+
     console.log(`${WrapperAmountForPennies} is the amount of penny wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
 
     return PenniesCounter;
@@ -94,13 +57,24 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 
 function PutNickelsInNickelWrappers()
 {
+    let NickelsWrapper = 40;
+    let WrapperAmountForNickels = 0;
+    let NickelsRemainder = 0; 
+
     for (let i = 0; i < CoinSetArray.length; i++)
     {
         if (CoinSetArray[i] === 'Nickel')
         {
             NickelsCounter++;
+
+            WrapperAmountForNickels = Math.floor(NickelsCounter/NickelsWrapper);
+
+            NickelsRemainder = NickelsCounter % NickelsWrapper;
         }
     }
+
+    console.log(`${WrapperAmountForNickels} is the amount of penny wrappers needed. ${NickelsRemainder > 0 ? ` And the remainder is: ${NickelsRemainder}` : ""}`);
+
     return NickelsCounter;
 }
 
@@ -128,7 +102,10 @@ function PutQuartersInQuarterWrappers()
     return QuartersCounter;
 }
 
+let PenniesTotalValue = PenniesCounter * 0.01;
+const RoundedPenniesAmount = PenniesTotalValue.toFixed(2);
 
+console.log(PenniesCounter + " pennies equaling: " + RoundedPenniesAmount);
 
 let NickelsTotalValue = NickelsCounter * 0.05;
 const RoundedNickelsAmount = NickelsTotalValue.toFixed(2);
