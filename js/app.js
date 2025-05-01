@@ -14,12 +14,6 @@
 //            total value of coins for each type
 //            total value of coins together
 
-// Each coin wrapper is its own array. If a wrapper is full, make a new one and fill that too
-const PennyWrapper = [];
-const NickelWrapper = [];
-const DimeWrapper = [];
-const QuarterWrapper = [];
-
 // Counters for each coin will keep trach of how many coins are created
 let PenniesCounter = 0;
 let NickelsCounter = 0;
@@ -68,15 +62,16 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Penny'
-            && PennyWrapper.length < 50){
-
+        if (CoinSetArray[i] === 'Penny')
+        {
             PenniesCounter++;
-            PennyWrapper.push('Penny');
-            if (PennyWrapper.length >= 50)
-            {
-                PenniesWrapperCounter++;
-            }
+
+            let pennyWrapper = 50;
+            let wrapperAmount = Math.floor(PenniesCounter/pennyWrapper);
+            let remainder = PenniesCounter & pennyWrapper;
+
+            console.log(`${wrapperAmount} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${remainder}` : ""}`)
+
         }
         else 
         {
