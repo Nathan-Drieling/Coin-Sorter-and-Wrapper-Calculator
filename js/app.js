@@ -20,11 +20,19 @@ let NickelsCounter = 0;
 let DimesCounter = 0;
 let QuartersCounter = 0;
 
-// variables to check how many pennies are left over
-let PenniesThatAreLeftOver = 0;
-let NickelsThatAreLeftOver = 0;
-let DimesThatAreLeftOver = 0;
-let QuartersThatAreLeftOver = 0;
+let pennyWrapper = 50;
+let nickelWrapper = 40;
+let dimeWrapper = 50;
+let quarterWrapper = 40;
+
+let wrapperAmountForPennies = 0;
+let wrapperAmountForNickels = 0;
+let wrapperAmountForDimes = 0;
+let wrapperAmountForQuarters = 0;
+
+
+wrapperAmountForPennies = Math.floor(PenniesCounter/pennyWrapper);
+let remainder = PenniesCounter % pennyWrapper;
 
 // Counters for each coin will keep trach of how many coins are created
 let PenniesWrapperCounter = 0;
@@ -81,15 +89,9 @@ function PutNickelsInNickelWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Nickel' 
-            && NickelWrapper.length < 40){
-
-            NickelsCounter++;
-            NickelWrapper.push('Nickel');
-        }
-        else
+        if (CoinSetArray[i] === 'Nickel')
         {
-            NickelsThatAreLeftOver++;
+            NickelsCounter++;
         }
     }
     return NickelsCounter;
@@ -99,15 +101,9 @@ function PutDimesInDimeWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Dime'
-            && DimeWrapper.length < 50){
-
-            DimesCounter++;
-            DimeWrapper.push('Dime');
-        }
-        else
+        if (CoinSetArray[i] === 'Dime')
         {
-            DimesThatAreLeftOver++;
+            DimesCounter++;
         }
     }
     return DimesCounter;
@@ -117,15 +113,9 @@ function PutQuartersInQuarterWrappers()
 {
     for (let i = 0; i < CoinSetArray.length; i++)
     {
-        if (CoinSetArray[i] === 'Quarter'
-            && QuarterWrapper.length < 40){
-
-            QuartersCounter++;
-            QuarterWrapper.push('Quarter');    
-        }
-        else
+        if (CoinSetArray[i] === 'Quarter')
         {
-            QuartersThatAreLeftOver++;
+            QuartersCounter++;   
         }
     }
     return QuartersCounter;
@@ -159,27 +149,3 @@ let GrandTotal = (PenniesCounter * 0.01)
 const RoundedGrandTotal = GrandTotal.toFixed(2);
 
 console.log("Total: $" + RoundedGrandTotal);
-
-console.log("There are " + PenniesThatAreLeftOver 
-                         + " pennies leftover");
-
-console.log("There are " + NickelsThatAreLeftOver 
-                         + " nickels leftover");
-
-console.log("There are " + DimesThatAreLeftOver 
-                         + " dimes leftover");
-
-console.log("There are " + QuartersThatAreLeftOver 
-                         + " quarters leftover");
-
-// let LeftoverPennies = PenniesNotInWrapper();
-// let LeftoverNickels = NickelsNotInWrapper();
-// let LeftoverDimes = DimesNotInWrapper();
-// let LeftoverQuarters = QuartersNotInWrapper();
-
-// just a test to see the arrays
-
-// console.log("Here are all the pennies: " + PennyWrapper)
-// console.log("Here are all the Nickels: " + NickelWrapper)
-// console.log("Here are all the Dimes: " + DimeWrapper)
-// console.log("Here are all the Quarters: " + QuarterWrapper)
