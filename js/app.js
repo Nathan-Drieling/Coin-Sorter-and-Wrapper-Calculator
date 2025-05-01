@@ -68,7 +68,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
 
             let pennyWrapper = 50;
             let wrapperAmount = Math.floor(PenniesCounter/pennyWrapper);
-            let remainder = PenniesCounter & pennyWrapper;
+            let remainder = PenniesCounter % pennyWrapper;
 
             console.log(`${wrapperAmount} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${remainder}` : ""}`);
 
