@@ -73,10 +73,6 @@ function PutPenniesInPennyWrappers(CoinSetArray)
             console.log(`${wrapperAmount} is the amount of wrappers needed. ${remainder > 0 ? ` And the remainder is: ${remainder}` : ""}`);
 
         }
-        else 
-        {
-            PenniesThatAreLeftOver++;
-        }
     }
     return PenniesCounter;
 }
