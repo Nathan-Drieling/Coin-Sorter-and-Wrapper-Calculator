@@ -88,7 +88,7 @@ function PutPenniesInPennyWrappers(CoinSetArray)
         }
     }
 
-    console.log(`${wrapperAmountForPennies} is the amount of wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
+    console.log(`${WrapperAmountForPennies} is the amount of wrappers needed. ${PenniesRemainder > 0 ? ` And the remainder is: ${PenniesRemainder}` : ""}`);
 
     return PenniesCounter, wrapperAmountForPennies;
 }
