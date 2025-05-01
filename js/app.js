@@ -73,32 +73,56 @@ function PutNickelsInNickelWrappers()
         }
     }
 
-    console.log(`${WrapperAmountForNickels} is the amount of penny wrappers needed. ${NickelsRemainder > 0 ? ` And the remainder is: ${NickelsRemainder}` : ""}`);
+    console.log(`${WrapperAmountForNickels} is the amount of nickel wrappers needed. ${NickelsRemainder > 0 ? ` And the remainder is: ${NickelsRemainder}` : ""}`);
 
     return NickelsCounter;
 }
 
 function PutDimesInDimeWrappers()
 {
+
+    let DimesWrapper = 50;
+    let WrapperAmountForDimes = 0;
+    let DimesRemainder = 0; 
+
     for (let i = 0; i < CoinSetArray.length; i++)
     {
         if (CoinSetArray[i] === 'Dime')
         {
             DimesCounter++;
+
+            WrapperAmountForDimes = Math.floor(DimesCounter/DimesWrapper);
+
+            DimesRemainder = DimesCounter % DimesWrapper;
         }
     }
+
+    console.log(`${WrapperAmountForDimes} is the amount of dime wrappers needed. ${DimesRemainder > 0 ? ` And the remainder is: ${DimesRemainder}` : ""}`);
+
     return DimesCounter;
 }
 
 function PutQuartersInQuarterWrappers()
 {
+
+    let QuartersWrapper = 40;
+    let WrapperAmountForQuarters = 0;
+    let QuartersRemainder = 0; 
+
     for (let i = 0; i < CoinSetArray.length; i++)
     {
         if (CoinSetArray[i] === 'Quarter')
         {
             QuartersCounter++;   
+
+            WrapperAmountForQuarters = Math.floor(QuartersCounter/QuartersWrapper);
+
+            QuartersRemainder = QuartersCounter % QuartersWrapper;
         }
     }
+
+    console.log(`${WrapperAmountForQuarters} is the amount of quarters wrappers needed. ${QuartersRemainder > 0 ? ` And the remainder is: ${QuartersRemainder}` : ""}`);
+
     return QuartersCounter;
 }
 
